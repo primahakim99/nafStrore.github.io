@@ -15,17 +15,16 @@
                 <th scope="col">Action</th>
             </tr>
         </thead>
-        @foreach($product as $product)
+        @foreach($products as $product)
         <tbody>
             <tr>
                 <th scope="row">{{ $loop->iteration }}</th>
-                <td><img class="img-fluid img-responsive"
-                src="{{ asset('storage/'.$product->image) }}" style="height: 150px; width: 150px;"></td>
-                <td>{{ $product->category->name }}</td>
-                <td>{{ $product->name }}</td>
-                <td>{{ $product->stock }}</td>
-                <td>{{ $product->weight }}</td>
-                <td>{{ $product->price }}</td>
+                <td scope="row"><img class="img-fluid img-responsive" src="{{$product->image}}" style="height: 150px; width: 150px;"></td>
+                <td scope="row">{{ $product->category->name }}</td>
+                <td scope="row">{{ $product->name }}</td>
+                <td scope="row">{{ $product->stock }}</td>
+                <td scope="row">{{ $product->weight }}</td>
+                <td scope="row">{{ $product->price }}</td>
                 <td>
                     <a href="/product/{{ $product->slug }}" class="btn bg-info">Show</a>
                     <a href="/product/{{ $product->slug }}/edit" class="btn bg-warning">Edit</a>

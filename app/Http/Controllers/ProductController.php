@@ -21,10 +21,12 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $product = Product::join('stores', 'products.store_id', '=', 'stores.id')->where('user_id', auth()->user()->id)->get();
-        return view('owner.product.index', compact('product'), [
+        $products = Product::join('stores', 'products.store_id', '=', 'stores.id')->where('user_id', auth()->user()->id)->get();
+        return view('owner.product.index', compact('products'), [
             'title' => 'Product List',
         ]);
+
+        
     }
 
     /**
@@ -64,7 +66,9 @@ class ProductController extends Controller
         ]);
 
         if ($request->file('image')) {
-            $validateData['image'] = $request->file('image')->store('products','public');
+            // Store the image in the Assets/images directory
+            $imagePath = $request->file('image')->storeAs('Assets/images', $request->file('image')->getClientOriginalName(), 'public');
+            $validateData['image'] = $imagePath;
         }
 
         Product::create($validateData);
