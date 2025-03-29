@@ -66,7 +66,9 @@ class ProductController extends Controller
         ]);
 
         if ($request->file('image')) {
-            $validateData['image'] = $request->file('image')->store('products','public');
+            // Store the image in the Assets/images directory
+            $imagePath = $request->file('image')->storeAs('Assets/images', $request->file('image')->getClientOriginalName(), 'public');
+            $validateData['image'] = $imagePath;
         }
 
         Product::create($validateData);
