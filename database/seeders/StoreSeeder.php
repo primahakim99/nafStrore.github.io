@@ -20,7 +20,7 @@ class StoreSeeder extends Seeder
             'address' => 'Jl. Kalpataru, Malang'
         ]);
         Store::create([
-            'user_id' => '4',
+            'user_id' => '7',
             'storeName' => 'Himalaya Store',
             'address' => 'Jl. Himalaya, Malang'
         ]);

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\cart;
+use App\Models\Cart;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\Category;
@@ -41,7 +41,7 @@ class WelcomeController extends Controller
     {
         return view('Shop', [
             "title" => "Shop",
-            "products" => product::latest()->filter(request(['category','search']))->get(),
+            "products" => Product::latest()->filter(request(['category','search']))->get(),
         ]);
     }
 
@@ -49,7 +49,7 @@ class WelcomeController extends Controller
     {
         return view('productAdmin', [
             "title" => "Product",
-            "products" => product::latest()->filter(request(['category','search']))->get(),
+            "products" => Product::latest()->filter(request(['category','search']))->get(),
         ]);
     }
 

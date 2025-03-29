@@ -15,7 +15,7 @@
                 <th scope="col">Action</th>
             </tr>
         </thead>
-        @foreach($product as $product)
+        @foreach($products as $product)
         <tbody>
             <tr>
                 <th scope="row">{{ $loop->iteration }}</th>

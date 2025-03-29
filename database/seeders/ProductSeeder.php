@@ -24,7 +24,7 @@ class ProductSeeder extends Seeder
             'stock'=> 100,
             'weight'=> 200,
             'price'=> 31500,
-            'image'=>'images/img-pro-01.jpg',
+            'image'=>'Assets/images/img-pro-01.jpg',
         ]);
 
         DB::table('products')->insert([
@@ -36,7 +36,7 @@ class ProductSeeder extends Seeder
             'stock'=> 100,
             'weight'=> 300,
             'price'=> 30000,
-            'image'=>'images/img-pro-02.jpg',
+            'image'=>'Assets/images/img-pro-02.jpg',
         ]);
 
         DB::table('products')->insert([
@@ -48,7 +48,7 @@ class ProductSeeder extends Seeder
             'stock'=> 100,
             'weight'=> 100,
             'price'=> 8700,
-            'image'=>'images/img-pro-03.jpg',
+            'image'=>'Assets/images/img-pro-03.jpg',
         ]);
 
         DB::table('products')->insert([
@@ -60,7 +60,7 @@ class ProductSeeder extends Seeder
             'stock'=> 100,
             'weight'=> 200,
             'price'=> 17000,
-            'image'=>'images/img-pro-04.jpg',
+            'image'=>'Assets/images/img-pro-04.jpg',
         ]);
 
         DB::table('products')->insert([
