@@ -62,7 +62,7 @@
                                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
                                         <div class="products-single fix">
                                             <div class="box-img-hover">
-                                                <img src="{{ asset('storage/'.$product->image) }}" class="img-fluid"
+                                                <img src="{{$product->image}}" class="img-fluid"
                                                     alt="Image" style="width: 300px; height:300px">
                                             </div>
                                             <div class="why-text">

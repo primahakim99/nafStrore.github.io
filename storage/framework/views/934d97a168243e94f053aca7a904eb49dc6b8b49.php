@@ -19,13 +19,12 @@
         <tbody>
             <tr>
                 <th scope="row"><?php echo e($loop->iteration); ?></th>
-                <td><img class="img-fluid img-responsive"
-                src="<?php echo e(asset('storage/'.$product->image)); ?>" style="height: 150px; width: 150px;"></td>
-                <td><?php echo e($product->category->name); ?></td>
-                <td><?php echo e($product->name); ?></td>
-                <td><?php echo e($product->stock); ?></td>
-                <td><?php echo e($product->weight); ?></td>
-                <td><?php echo e($product->price); ?></td>
+                <td scope="row"><img class="img-fluid img-responsive" src="<?php echo e($product->image); ?>" style="height: 150px; width: 150px;"></td>
+                <td scope="row"><?php echo e($product->category->name); ?></td>
+                <td scope="row"><?php echo e($product->name); ?></td>
+                <td scope="row"><?php echo e($product->stock); ?></td>
+                <td scope="row"><?php echo e($product->weight); ?></td>
+                <td scope="row"><?php echo e($product->price); ?></td>
                 <td>
                     <a href="/product/<?php echo e($product->slug); ?>" class="btn bg-info">Show</a>
                     <a href="/product/<?php echo e($product->slug); ?>/edit" class="btn bg-warning">Edit</a>

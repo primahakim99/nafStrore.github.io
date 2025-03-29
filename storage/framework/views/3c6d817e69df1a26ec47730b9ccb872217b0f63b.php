@@ -31,6 +31,7 @@
                     <td scope="row">Order Reject</td>
                     <?php endif; ?>
                 <td>
+                    
                     <a href="/orderOwner/<?php echo e($order->id); ?>" class="btn bg-info">Show</a>
                 </td>
             </tr>

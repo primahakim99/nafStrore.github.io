@@ -22,7 +22,7 @@ class OwnerOrderController extends Controller
                         ->join('orders', 'order_items.order_id', '=', 'orders.id')
                         ->where('stores.user_id', auth()->user()->id)
                         ->get();
-        // dd($orders);
+        dd($orders);
         return view('owner.order.index', [
             "title" => "Order Owner",
             'orders' => $orders,
